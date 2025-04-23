@@ -1,0 +1,15 @@
+meta {
+  name: Get user projects
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/users/:user_id/projects_users
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: {{userID}}
+}

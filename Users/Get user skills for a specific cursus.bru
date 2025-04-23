@@ -1,0 +1,16 @@
+meta {
+  name: Get user skills for a specific cursus
+  type: http
+  seq: 21
+}
+
+get {
+  url: {{baseUrl}}/users/:id/cursus_users/:cursus_id/skills
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: {{userID}}
+  cursus_id: 
+}

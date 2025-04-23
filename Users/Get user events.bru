@@ -1,0 +1,15 @@
+meta {
+  name: Get user events
+  type: http
+  seq: 19
+}
+
+get {
+  url: {{baseUrl}}/users/:user_id/events
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: {{userID}}
+}

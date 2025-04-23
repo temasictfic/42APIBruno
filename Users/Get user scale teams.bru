@@ -1,0 +1,15 @@
+meta {
+  name: Get user scale teams
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/users/:user_id/scale_teams
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: {{userID}}
+}

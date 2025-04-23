@@ -1,0 +1,20 @@
+meta {
+  name: Get coalition users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/coalitions/:id/users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  id: 
+}

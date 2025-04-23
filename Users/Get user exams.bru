@@ -1,0 +1,15 @@
+meta {
+  name: Get user exams
+  type: http
+  seq: 20
+}
+
+get {
+  url: {{baseUrl}}/users/:user_id/exams
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: {{userID}}
+}

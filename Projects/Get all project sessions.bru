@@ -1,0 +1,15 @@
+meta {
+  name: Get all project sessions
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/project_sessions/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+}

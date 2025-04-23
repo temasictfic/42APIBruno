@@ -1,0 +1,15 @@
+meta {
+  name: Get user apps
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/users/:user_id/apps
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: {{userID}}
+}

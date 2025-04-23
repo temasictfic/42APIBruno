@@ -1,0 +1,20 @@
+meta {
+  name: Get accreditation users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/accreditations/:accreditation_id/users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  accreditation_id: 
+}

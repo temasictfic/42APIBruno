@@ -1,0 +1,20 @@
+meta {
+  name: Get project projects users
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/projects/:id/projects_users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  id: 2571
+}

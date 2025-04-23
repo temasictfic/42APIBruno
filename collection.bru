@@ -1,0 +1,68 @@
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+docs {
+  # 42 API Bruno Collection
+  
+  This collection contains some GET endpoints from the 42 API, organized by resource type. Follow the instructions below to use this collection in Bruno.
+    - https://api.intra.42.fr/apidoc
+  
+  ## Setting Up Authentication
+  
+  The 42 API uses OAuth 2.0 for authentication. To use the collection:
+  
+  1. **Register an Application**: If you haven't already, register an application on the 42 Intranet to get your API credentials:
+     - Visit https://profile.intra.42.fr/oauth/applications/new
+     - Fill in the required details
+     - Set the redirect URI (can be http://localhost if just testing)
+     - Submit the form to get your Client ID and Client Secret
+  
+  2. **Configure Environment Variables**:
+     - In Bruno click 42 API v2 from top right
+     - Click on the Configure (gear icon)
+     - Fill in your CLIENT_ID and CLIENT_SECRET values
+     - Save the environment
+  
+  3. **Get and Set Access Token**:
+     - Run the "Get OAuth Token" request in the Authentication folder
+     - Post response script will set ACCESS_TOKEN
+  
+  ## Using the Collection
+  
+  Each folder contains endpoints for different resources:
+  
+  - **Accreditations**:
+  - **Achievements**:
+  - **Apps**:
+  - **Authentication**: OAuth token endpoint
+  - **Campus**:
+  - **Coalitions**:
+  - **Cursus**:
+  - **Events**:
+  - **Exams**:
+  - **Expertises**:
+  - **Groups**:
+  - **Locations**:
+  - **Products**:
+  - **Projects**:
+  - **Roles**:
+  - **Scale Teams**: Project evaluation teams
+  - **Skills**:
+  - **Teams**: Project teams
+  - **Titles**: User titles and badges
+  - **Users**:
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

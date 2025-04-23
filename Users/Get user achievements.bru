@@ -1,0 +1,20 @@
+meta {
+  name: Get user achievements
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/users/:id/achievements
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  id: {{userID}}
+}

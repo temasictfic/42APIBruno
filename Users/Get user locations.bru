@@ -1,0 +1,15 @@
+meta {
+  name: Get user locations
+  type: http
+  seq: 16
+}
+
+get {
+  url: {{baseUrl}}/users/:user_id/locations
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: {{userID}}
+}

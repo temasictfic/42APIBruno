@@ -1,0 +1,15 @@
+meta {
+  name: Get campus exams
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/campus/:campus_id/exams
+  body: none
+  auth: inherit
+}
+
+params:path {
+  campus_id: 50
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get user cursus
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/users/:id/cursus_users
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: {{userID}}
+}

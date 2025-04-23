@@ -1,0 +1,20 @@
+meta {
+  name: Get campus products
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/campus/:campus_id/products/:id
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~: 
+}
+
+params:path {
+  campus_id: 50
+  id: 
+}

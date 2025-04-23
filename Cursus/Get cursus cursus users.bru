@@ -1,0 +1,20 @@
+meta {
+  name: Get cursus cursus users
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/cursus/:id/cursus_users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  id: 
+}

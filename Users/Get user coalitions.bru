@@ -1,0 +1,15 @@
+meta {
+  name: Get user coalitions
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/users/:id/coalitions
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: {{userID}}
+}

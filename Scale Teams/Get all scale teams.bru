@@ -1,0 +1,20 @@
+meta {
+  name: Get all scale teams
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/scale_teams/:id
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  id: 
+}

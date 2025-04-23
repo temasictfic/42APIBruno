@@ -1,0 +1,20 @@
+meta {
+  name: Get project scale teams
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/projects/:project_id/scale_teams
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  project_id: 1
+}

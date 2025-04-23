@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "name": "42 API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ],
+  "size": 0.007883071899414062,
+  "filesCount": 50,
+  "presets": {
+    "requestType": "http",
+    "requestUrl": ""
+  }
+}

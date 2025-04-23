@@ -1,0 +1,15 @@
+meta {
+  name: Get all apps
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/apps/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 
+}

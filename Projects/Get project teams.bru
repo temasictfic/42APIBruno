@@ -1,0 +1,15 @@
+meta {
+  name: Get project teams
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/projects/:project_id/teams
+  body: none
+  auth: inherit
+}
+
+params:path {
+  project_id: 
+}

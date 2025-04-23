@@ -1,0 +1,15 @@
+meta {
+  name: Get role roles entities
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/roles/:role_id/roles_entities
+  body: none
+  auth: inherit
+}
+
+params:path {
+  role_id: 7
+}

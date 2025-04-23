@@ -1,0 +1,15 @@
+meta {
+  name: Get campus events
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/campus/:campus_id/events
+  body: none
+  auth: inherit
+}
+
+params:path {
+  campus_id: 50
+}

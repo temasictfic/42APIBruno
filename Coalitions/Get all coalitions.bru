@@ -1,0 +1,20 @@
+meta {
+  name: Get all coalitions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/coalitions/:id
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  id: 
+}

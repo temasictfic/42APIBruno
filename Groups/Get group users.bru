@@ -1,0 +1,20 @@
+meta {
+  name: Get group users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/groups/:id/users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  id: 
+}

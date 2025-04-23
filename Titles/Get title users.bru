@@ -1,0 +1,15 @@
+meta {
+  name: Get title users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/titles/:title_id/users
+  body: none
+  auth: inherit
+}
+
+params:path {
+  title_id: 55
+}

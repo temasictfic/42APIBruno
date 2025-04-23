@@ -1,0 +1,15 @@
+meta {
+  name: Get team users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/teams/:team_id/users
+  body: none
+  auth: inherit
+}
+
+params:path {
+  team_id: 
+}

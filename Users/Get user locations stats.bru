@@ -1,0 +1,20 @@
+meta {
+  name: Get user locations stats
+  type: http
+  seq: 17
+}
+
+get {
+  url: {{baseUrl}}/users/:id/locations_stats
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  id: {{userID}}
+}

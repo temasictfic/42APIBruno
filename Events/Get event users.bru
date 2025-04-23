@@ -1,0 +1,20 @@
+meta {
+  name: Get event users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/events/:event_id/events_users
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~per_page: 3
+  ~page: 
+}
+
+params:path {
+  event_id: 28705
+}

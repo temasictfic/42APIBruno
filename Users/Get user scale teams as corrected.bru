@@ -1,0 +1,15 @@
+meta {
+  name: Get user scale teams as corrected
+  type: http
+  seq: 11
+}
+
+get {
+  url: {{baseUrl}}/users/:user_id/scale_teams/as_corrected
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: {{userID}}
+}

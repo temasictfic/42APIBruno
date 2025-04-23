@@ -1,0 +1,15 @@
+meta {
+  name: Get user expertises
+  type: http
+  seq: 15
+}
+
+get {
+  url: {{baseUrl}}/users/:user_id/expertises_users
+  body: none
+  auth: inherit
+}
+
+params:path {
+  user_id: {{userID}}
+}

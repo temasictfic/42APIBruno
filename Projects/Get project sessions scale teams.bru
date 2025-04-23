@@ -1,0 +1,21 @@
+meta {
+  name: Get project sessions scale teams
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/project_sessions/:project_session_id/scale_teams/:id
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: 
+  ~per_page: 
+}
+
+params:path {
+  project_session_id: 
+  id: 
+}
