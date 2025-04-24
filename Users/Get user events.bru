@@ -27,11 +27,24 @@ script:post-response {
       };
   }, {});
   
-  // Format the output as requested: "<kind>: <count>" using functional approach
-  const output = Object.entries(kindCounts)
-      .map(([kind, count]) => `${kind}: ${count}`)
-      .join('\n');
+  // Transform the count data into row format for the table
+  const rowData = Object.entries(kindCounts).map(([kind, count]) => ({
+      kind: kind,
+      count: count
+  }));
   
-  // Log the formatted output
-  console.log(output);
+  // Define the columns for the table
+  const columnDefinitions = [
+      { field: "kind", filter: true, floatingFilter: true },
+      { field: "count", filter: true, floatingFilter: true }
+  ];
+  
+  // Visualize the data as a table
+  bru.visualize('table', {
+      name: 'eventKindCounts',
+      provider: 'ag-grid',
+      props: { rowData, columnDefinitions }
+  });
+  
+  
 }
