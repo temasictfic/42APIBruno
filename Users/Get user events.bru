@@ -13,3 +13,25 @@ get {
 params:path {
   user_id: {{userID}}
 }
+
+script:post-response {
+  // Get the response body
+  const jsonResponse = res.getBody();
+  
+  // Count events by kind using functional approach
+  const kindCounts = jsonResponse.reduce((counts, event) => {
+      const { kind } = event;
+      return {
+          ...counts,
+          [kind]: (counts[kind] || 0) + 1
+      };
+  }, {});
+  
+  // Format the output as requested: "<kind>: <count>" using functional approach
+  const output = Object.entries(kindCounts)
+      .map(([kind, count]) => `${kind}: ${count}`)
+      .join('\n');
+  
+  // Log the formatted output
+  console.log(output);
+}
