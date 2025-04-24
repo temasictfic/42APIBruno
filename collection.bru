@@ -1,9 +1,20 @@
 auth {
-  mode: bearer
+  mode: oauth2
 }
 
-auth:bearer {
-  token: {{ACCESS_TOKEN}}
+auth:oauth2 {
+  grant_type: client_credentials
+  access_token_url: {{tokenUrl}}
+  refresh_token_url: 
+  client_id: {{clientID}}
+  client_secret: {{clientSecret}}
+  scope: 
+  credentials_placement: body
+  credentials_id: credentials
+  token_placement: header
+  token_header_prefix: Bearer
+  auto_fetch_token: true
+  auto_refresh_token: false
 }
 
 docs {
@@ -25,12 +36,13 @@ docs {
   2. **Configure Environment Variables**:
      - In Bruno click 42 API v2 from top right
      - Click on the Configure (gear icon)
-     - Fill in your CLIENT_ID and CLIENT_SECRET values
+     - Fill in your clientID and clientSecret values
+     - Change your userId value
      - Save the environment
   
   3. **Get and Set Access Token**:
-     - Run the "Get OAuth Token" request in the Authentication folder
-     - Post response script will set ACCESS_TOKEN
+     - In 42 API Collection click Auth tab
+     - Click on "Get Access Token" and "Save" buttons
   
   ## Using the Collection
   
@@ -39,7 +51,6 @@ docs {
   - **Accreditations**:
   - **Achievements**:
   - **Apps**:
-  - **Authentication**: OAuth token endpoint
   - **Campus**:
   - **Coalitions**:
   - **Cursus**:
